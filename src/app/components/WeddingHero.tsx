@@ -13,7 +13,7 @@ export function WeddingHero({ rsvpRef }: WeddingHeroProps) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/wedding-bg-v4.jpg"
+          src="/assets/wedding-bg-v4.JPG"
           alt="Wedding background"
           fill
           priority
