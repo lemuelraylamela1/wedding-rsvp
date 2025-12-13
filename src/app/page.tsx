@@ -5,6 +5,7 @@ import { WeddingHero } from "./components/WeddingHero";
 import { RSVPForm } from "./components/RSVPForm";
 import { WeddingDetails } from "./components/WeddingDetails";
 import { BackgroundMusic } from "./components/BackgroundMusic";
+import { WeddingCountdown } from "./components/WeddingCountdown";
 
 export default function App() {
   const rsvpRef = useRef<HTMLDivElement>(null);
@@ -19,6 +20,7 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-rose-50">
       <BackgroundMusic />
       <WeddingHero rsvpRef={rsvpRef} />
+      <WeddingCountdown />
       <WeddingDetails />
       <div ref={rsvpRef} id="rsvp">
         <RSVPForm isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} />
