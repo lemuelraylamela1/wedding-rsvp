@@ -41,7 +41,7 @@ export function BackgroundMusic() {
 
   return (
     <>
-      <audio ref={audioRef} src="/assets/music/wedding-song.mp3" />
+      <audio ref={audioRef} src="/assets/wedding-song.mp3" />
       <button
         onClick={toggleMute}
         className="fixed bottom-6 right-6 z-50 rounded-full bg-white/80 backdrop-blur-md p-3 shadow-lg hover:scale-105 transition">
