@@ -6,6 +6,7 @@ import { WeddingDetails } from "./components/WeddingDetails";
 import { RSVPForm } from "./components/RSVPForm";
 import { BackgroundMusic } from "./components/BackgroundMusic";
 import { InvitationLanding } from "./components/InvitationLanding";
+import { WeddingCountdown } from "./components/WeddingCountdown";
 
 export default function App() {
   const rsvpRef = useRef<HTMLDivElement>(null);
@@ -20,6 +21,7 @@ export default function App() {
         <>
           <BackgroundMusic play={opened} />
           <WeddingHero rsvpRef={rsvpRef} />
+          <WeddingCountdown />
           <WeddingDetails />
           <div ref={rsvpRef} id="rsvp">
             <RSVPForm
