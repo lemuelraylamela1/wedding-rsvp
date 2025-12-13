@@ -85,7 +85,6 @@ export function WeddingCountdown({
               <p className="text-gray-600 mb-16 text-lg">
                 With love, laughter, and happily ever after
               </p>
-
               {/* Countdown */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 {countdownItems.map((item, index) => (
@@ -125,10 +124,6 @@ export function WeddingCountdown({
                   </motion.div>
                 ))}
               </div>
-
-              <p className="mt-16 text-sm text-gray-400 italic">
-                (Tap anywhere to enjoy the music 🎻)
-              </p>
             </motion.div>
           ) : (
             /* 💍 Married Message */
