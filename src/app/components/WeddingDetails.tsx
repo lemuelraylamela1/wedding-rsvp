@@ -92,7 +92,7 @@ export function WeddingDetails() {
           August 9, 2019 The day we said yes — officially boyfriend &
           girlfriend. A simple start to a love that would grow deeper with time.
         </p>
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 leading-relaxed mb-4">
           December 30, 2023 He asked, she said YES 💍 A promise made to choose
           each other forever.
         </p>
