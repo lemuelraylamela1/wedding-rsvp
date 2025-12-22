@@ -41,9 +41,9 @@ export default function App() {
           <WeddingHero rsvpRef={rsvpRef} />
           <WeddingCountdown />
           <PrenupGallery images={prenupImages} />
+          <WeddingDetails />
           <WeddingAttire />
           <EntourageImageSection imageSrc="/assets/entourage-list.jpg" />
-          <WeddingDetails />
           <div ref={rsvpRef} id="rsvp">
             <RSVPForm
               isSubmitted={isSubmitted}
