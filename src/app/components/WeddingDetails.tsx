@@ -52,9 +52,9 @@ export function WeddingDetails() {
         transition={{ duration: 0.8 }}
         className="mb-16 rounded-lg overflow-hidden shadow-2xl">
         <ImageWithFallback
-          src="https://images.unsplash.com/photo-1674970538959-e7475d8d376f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwd2VkZGluZyUyMHZlbnVlfGVufDF8fHx8MTc2NTUzNjY5Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src="assets/venue.jpg"
           alt="Wedding venue"
-          className="w-full h-96 object-cover"
+          className="w-full h-96 object-fill"
         />
       </motion.div>
 
