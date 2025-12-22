@@ -90,8 +90,14 @@ export function InvitationLanding({ onOpen }: { onOpen: () => void }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2 }}
-          className="mb-10 font-serif text-5xl md:text-7xl text-white">
-          Shanaia & Jefferson
+          className="mb-10 font-serif text-5xl md:text-7xl text-white leading-tight">
+          {/* Mobile (CP) – 3 lines */}
+          <span className="block md:hidden">Shanaia</span>
+          <span className="block md:hidden text-3xl my-1">&</span>
+          <span className="block md:hidden">Jefferson</span>
+
+          {/* Desktop */}
+          <span className="hidden md:inline">Shanaia & Jefferson</span>
         </motion.h1>
 
         {/* Open Button with Ripple */}
