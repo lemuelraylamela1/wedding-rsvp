@@ -55,7 +55,7 @@ export function WeddingHero({ rsvpRef }: WeddingHeroProps) {
             <span className="block text-4xl md:text-5xl font-light my-2 text-white/80">
               &
             </span>
-            Jeff
+            Jefferson
           </h1>
 
           {/* Decorative divider */}
@@ -80,7 +80,7 @@ export function WeddingHero({ rsvpRef }: WeddingHeroProps) {
         </motion.p>
 
         {/* CTA */}
-        <motion.button
+        {/* <motion.button
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.97 }}
           onClick={() =>
@@ -99,7 +99,7 @@ export function WeddingHero({ rsvpRef }: WeddingHeroProps) {
             transition-all duration-300
           ">
           RSVP Now
-        </motion.button>
+        </motion.button> */}
       </motion.div>
 
       {/* Scroll indicator */}

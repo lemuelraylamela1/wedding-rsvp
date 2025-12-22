@@ -9,6 +9,7 @@ import { InvitationLanding } from "./components/InvitationLanding";
 import { WeddingCountdown } from "./components/WeddingCountdown";
 import { WeddingAttire } from "./components/WeddingAttire";
 import { PrenupGallery } from "./components/PrenupGallery";
+import { EntourageImageSection } from "@/app/components/EntourageImageSection";
 
 export default function App() {
   const rsvpRef = useRef<HTMLDivElement>(null);
@@ -19,16 +20,15 @@ export default function App() {
     { src: "/assets/prenup1.JPG", alt: "Prenup photo 1" },
     { src: "/assets/prenup2.JPG", alt: "Prenup photo 2" },
     { src: "/assets/prenup3.JPG", alt: "Prenup photo 3" },
-    { src: "/assets/prenup4.JPG", alt: "Prenup photo 3" },
-    { src: "/assets/prenup5.JPG", alt: "Prenup photo 3" },
-    { src: "/assets/prenup6.JPG", alt: "Prenup photo 3" },
-    { src: "/assets/prenup7.JPG", alt: "Prenup photo 3" },
-    { src: "/assets/prenup8.JPG", alt: "Prenup photo 3" },
-    { src: "/assets/prenup9.JPG", alt: "Prenup photo 3" },
-    { src: "/assets/prenup10.jpg", alt: "Prenup photo 3" },
-    { src: "/assets/prenup11.jpg", alt: "Prenup photo 3" },
-    { src: "/assets/prenup12.jpg", alt: "Prenup photo 3" },
-    { src: "/assets/prenup13.jpg", alt: "Prenup photo 3" },
+    { src: "/assets/prenup4.JPG", alt: "Prenup photo 4" },
+    { src: "/assets/prenup5.JPG", alt: "Prenup photo 5" },
+    { src: "/assets/prenup6.JPG", alt: "Prenup photo 6" },
+    { src: "/assets/prenup7.JPG", alt: "Prenup photo 7" },
+    { src: "/assets/prenup8.JPG", alt: "Prenup photo 8" },
+    { src: "/assets/prenup9.JPG", alt: "Prenup photo 9" },
+    { src: "/assets/prenup10.jpg", alt: "Prenup photo 10" },
+    { src: "/assets/prenup11.jpg", alt: "Prenup photo 11" },
+    { src: "/assets/prenup12.jpg", alt: "Prenup photo 12" },
   ];
 
   return (
@@ -42,6 +42,7 @@ export default function App() {
           <WeddingCountdown />
           <PrenupGallery images={prenupImages} />
           <WeddingAttire />
+          <EntourageImageSection imageSrc="/assets/entourage-list.jpg" />
           <WeddingDetails />
           <div ref={rsvpRef} id="rsvp">
             <RSVPForm

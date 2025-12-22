@@ -91,7 +91,7 @@ export function InvitationLanding({ onOpen }: { onOpen: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2 }}
           className="mb-10 font-serif text-5xl md:text-7xl text-white">
-          Shanaia & Jeff
+          Shanaia & Jefferson
         </motion.h1>
 
         {/* Open Button with Ripple */}
