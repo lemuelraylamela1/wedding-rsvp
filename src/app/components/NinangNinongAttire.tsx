@@ -62,7 +62,7 @@ export function NinangNinongAttire() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="space-y-12 md:space-y-16">
+          className="space-y-12 md:space-y-16 text-center md:text-left">
           {/* Header */}
           <div>
             <motion.h2
@@ -74,7 +74,7 @@ export function NinangNinongAttire() {
               The Details
             </motion.h2>
 
-            <div className="mt-4 mb-4 w-20 md:w-24 h-px bg-[#c2a27a]" />
+            <div className="mt-4 mb-4 w-20 md:w-24 h-px bg-[#c2a27a] mx-auto md:mx-0" />
 
             <p
               className={`${cormorant.className} text-2xl md:text-3xl text-[#3f3a35]`}>
@@ -82,7 +82,7 @@ export function NinangNinongAttire() {
             </p>
 
             <p
-              className={`${cormorant.className} mt-4 md:mt-6 max-w-full md:max-w-xl text-[#6a5848] leading-[1.6] md:leading-[1.7] font-semibold !italic`}>
+              className={`${cormorant.className} mt-4 md:mt-6 max-w-full md:max-w-xl text-[#6a5848] leading-[1.6] md:leading-[1.7] font-semibold !italic mx-auto md:mx-0`}>
               We would love to see you in your formal attire.
               <br />
               We encourage you to dress according to our wedding color.

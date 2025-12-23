@@ -68,11 +68,12 @@ export function GuestsAttire() {
           viewport={{ once: true }}
           transition={{ duration: 1.4, ease: "easeOut" }}
           whileHover={{ scale: 1.02 }}
-          className="flex justify-center">
+          className="relative w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto rounded-xl overflow-hidden">
+          {/* Image */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="rounded-xl overflow-hidden w-full max-w-sm md:max-w-md lg:max-w-lg">
+            className="w-full h-full">
             <Image
               src="/assets/attire_guests.png"
               alt="Guests attire illustration"
@@ -82,6 +83,29 @@ export function GuestsAttire() {
               className="object-contain shadow-lg w-full h-auto"
             />
           </motion.div>
+
+          {/* Overlay Text */}
+          <div className="absolute inset-0 flex flex-col items-center justify-start pt-6 md:pt-8 lg:pt-12 text-center px-4">
+            <motion.h3
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.1 }}
+              className={`${gistesy.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#7a4a16] font-bold flex flex-wrap justify-center gap-3`}>
+              Guests
+              <span className="inline-flex gap-2 md:gap-3">
+                {["#6b4a12", "#855c34", "#a4744f", "#c5a07a"].map(
+                  (color, i) => (
+                    <span
+                      key={i}
+                      className="w-8 h-8 md:w-10 md:h-10 rounded-full"
+                      style={{ backgroundColor: color }}
+                    />
+                  )
+                )}
+              </span>
+            </motion.h3>
+          </div>
         </motion.div>
 
         {/* RIGHT — TEXT */}
@@ -91,25 +115,7 @@ export function GuestsAttire() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="space-y-6 md:space-y-8 lg:space-y-12">
-          <motion.h3
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.1 }}
-            className={`${gistesy.className} text-4xl md:text-5xl lg:text-6xl text-[#7a4a16] leading-tight flex flex-wrap items-center gap-4`}>
-            Guests
-            <span className="inline-flex gap-3 md:gap-4">
-              {["#6b4a12", "#855c34", "#a4744f", "#c5a07a"].map((color, i) => (
-                <span
-                  key={i}
-                  className="w-10 h-10 md:w-14 md:h-14 rounded-full"
-                  style={{ backgroundColor: color }}
-                />
-              ))}
-            </span>
-          </motion.h3>
-
+          className="space-y-6 md:space-y-8 lg:space-y-12 text-center md:text-left">
           <div
             className={`${cormorant.className} space-y-2 md:space-y-4 text-[#3f3a35] text-base md:text-lg italic [&_strong]:font-semibold [&_strong]:text-[#7a4a16]`}>
             <p>
@@ -121,7 +127,7 @@ export function GuestsAttire() {
           </div>
 
           <div
-            className={`${alta.className} font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] text-[#3f3a35] leading-tight`}>
+            className={`${alta.className} font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] text-[#3f3a35] leading-tight mx-auto md:mx-0`}>
             <p className="!m-0">Strictly NO JEANS and Shorts</p>
           </div>
         </motion.div>
