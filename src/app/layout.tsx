@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Allura, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
+/* Existing fonts */
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -10,6 +11,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+/* NEW – Canva-like wedding fonts */
+const scriptFont = Allura({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-script",
+});
+
+const serifFont = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +38,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+          ${scriptFont.variable}
+          ${serifFont.variable}
+          antialiased
+        `}>
         {children}
       </body>
     </html>

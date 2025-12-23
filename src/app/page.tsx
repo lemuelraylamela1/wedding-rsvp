@@ -10,6 +10,8 @@ import { WeddingCountdown } from "./components/WeddingCountdown";
 import { WeddingAttire } from "./components/WeddingAttire";
 import { PrenupGallery } from "./components/PrenupGallery";
 import { EntourageImageSection } from "@/app/components/EntourageImageSection";
+import { NinangNinongAttire } from "./components/NinangNinongAttire";
+import { GuestsAttire } from "./components/Guests";
 
 export default function App() {
   const rsvpRef = useRef<HTMLDivElement>(null);
@@ -42,8 +44,9 @@ export default function App() {
           <WeddingCountdown />
           <PrenupGallery images={prenupImages} />
           <WeddingDetails />
-
           <EntourageImageSection imageSrc="/assets/entourage-list.jpg" />
+          <NinangNinongAttire />
+          <GuestsAttire />
           <WeddingAttire />
           <div ref={rsvpRef} id="rsvp">
             <RSVPForm
