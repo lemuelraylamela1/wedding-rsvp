@@ -117,7 +117,7 @@ export function GuestsAttire() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="space-y-6 md:space-y-8 lg:space-y-12 text-center md:text-left">
           <div
-            className={`${cormorant.className} space-y-2 md:space-y-4 text-[#3f3a35] text-base md:text-lg italic [&_strong]:font-semibold [&_strong]:text-[#7a4a16]`}>
+            className={`${cormorant.className} space-y-3 md:space-y-4 text-[#3f3a35] text-base md:text-lg !italic`}>
             <p>
               <strong>LADIES:</strong> Formal dress
             </p>
