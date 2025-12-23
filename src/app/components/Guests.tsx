@@ -119,10 +119,10 @@ export function GuestsAttire() {
           <div
             className={`${cormorant.className} space-y-2 md:space-y-4 text-[#3f3a35] text-base md:text-lg italic [&_strong]:font-semibold [&_strong]:text-[#7a4a16]`}>
             <p>
-              <strong>LADIES:</strong> Filipiniana / Brown Modern Filipiniana
+              <strong>LADIES:</strong> Formal dress
             </p>
             <p>
-              <strong>GENTLEMEN:</strong> Barong & Slacks
+              <strong>GENTLEMEN:</strong> Long sleeves or Formal polo
             </p>
           </div>
 

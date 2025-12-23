@@ -8,9 +8,9 @@ export function WeddingAttire() {
   const [selectedQR, setSelectedQR] = useState<string | null>(null);
 
   const qrData = [
-    { label: "GoTyme", src: "/assets/Gotyme2.JPG" },
-    { label: "GCash", src: "/assets/gcash.jpg" },
-    { label: "BPI", src: "/assets/bpi2.JPG" },
+    { label: "GoTyme", src: "/assets/gotyme.JPG" },
+    { label: "GCash", src: "/assets/gcash2.jpg" },
+    { label: "BPI", src: "/assets/bpi.JPG" },
   ];
 
   return (
