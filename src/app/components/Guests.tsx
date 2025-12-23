@@ -29,7 +29,6 @@ const cormorant = Cormorant_Garamond({
   weight: ["400", "500", "600"],
 });
 
-/* Fonts — Canva-matched */
 const script = Allura({
   subsets: ["latin"],
   weight: "400",
@@ -55,12 +54,12 @@ export function GuestsAttire() {
   return (
     <section
       ref={ref}
-      className={`${script.variable} ${serif.variable} ${meaCulpa.variable} relative bg-[#fbf7f7] py-24 px-6 overflow-hidden`}>
+      className={`${script.variable} ${serif.variable} ${meaCulpa.variable} relative bg-[#fbf7f7] py-24 md:py-32 px-6 overflow-hidden`}>
       {/* Watercolor background */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[radial-gradient(circle,#ead7c2,transparent_60%)] opacity-70" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[radial-gradient(circle,#f0dfcc,transparent_60%)] opacity-70" />
+      <div className="absolute top-0 right-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-[radial-gradient(circle,#ead7c2,transparent_60%)] opacity-70" />
+      <div className="absolute bottom-0 left-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-[radial-gradient(circle,#f0dfcc,transparent_60%)] opacity-70" />
 
-      <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         {/* LEFT — IMAGE */}
         <motion.div
           style={{ y: imageY }}
@@ -73,14 +72,14 @@ export function GuestsAttire() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="rounded-xl overflow-hidden">
+            className="rounded-xl overflow-hidden w-full max-w-sm md:max-w-md lg:max-w-lg">
             <Image
               src="/assets/attire_guests.png"
-              alt="Ninang and Ninong attire illustration"
-              width={640} // increased size
-              height={1080} // increased size
+              alt="Guests attire illustration"
+              width={640}
+              height={1080}
               priority
-              className="object-contain shadow-lg"
+              className="object-contain shadow-lg w-full h-auto"
             />
           </motion.div>
         </motion.div>
@@ -92,19 +91,19 @@ export function GuestsAttire() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="space-y-8 lg:space-y-12">
+          className="space-y-6 md:space-y-8 lg:space-y-12">
           <motion.h3
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.1 }}
-            className={`${gistesy.className} text-5xl md:text-6xl text-[#7a4a16] leading-tight flex items-center gap-6`}>
+            className={`${gistesy.className} text-4xl md:text-5xl lg:text-6xl text-[#7a4a16] leading-tight flex flex-wrap items-center gap-4`}>
             Guests
-            <span className="inline-flex gap-4">
+            <span className="inline-flex gap-3 md:gap-4">
               {["#6b4a12", "#855c34", "#a4744f", "#c5a07a"].map((color, i) => (
                 <span
                   key={i}
-                  className="w-14 h-14 rounded-full"
+                  className="w-10 h-10 md:w-14 md:h-14 rounded-full"
                   style={{ backgroundColor: color }}
                 />
               ))}
@@ -112,7 +111,7 @@ export function GuestsAttire() {
           </motion.h3>
 
           <div
-            className={`${cormorant.className} space-y-4 text-[#3f3a35] text-lg italic [&_strong]:font-semibold [&_strong]:text-[#7a4a16]`}>
+            className={`${cormorant.className} space-y-2 md:space-y-4 text-[#3f3a35] text-base md:text-lg italic [&_strong]:font-semibold [&_strong]:text-[#7a4a16]`}>
             <p>
               <strong>LADIES:</strong> Filipiniana / Brown Modern Filipiniana
             </p>
@@ -122,7 +121,7 @@ export function GuestsAttire() {
           </div>
 
           <div
-            className={`${alta.className} font-sans text-[#3f3a35] text-[5rem] md:text-[4rem] leading-tight`}>
+            className={`${alta.className} font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] text-[#3f3a35] leading-tight`}>
             <p className="!m-0">Strictly NO JEANS and Shorts</p>
           </div>
         </motion.div>

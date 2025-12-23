@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Clock, Music, Palette } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import Image from "next/image";
 
 export function WeddingDetails() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const details = [
     {
       icon: Clock,
@@ -50,13 +54,34 @@ export function WeddingDetails() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="mb-16 rounded-lg overflow-hidden shadow-2xl">
-        <ImageWithFallback
-          src="assets/venue.jpg"
+        className="mb-16 rounded-lg overflow-hidden shadow-2xl cursor-pointer"
+        whileHover={{ scale: 1.02 }}
+        onClick={() => setSelectedImage("/assets/venue.jpg")}>
+        <Image
+          src="/assets/venue.jpg"
           alt="Wedding venue"
-          className="w-full h-96 object-fill"
+          width={1200}
+          height={700}
+          className="w-full h-96 object-cover"
         />
       </motion.div>
+
+      {/* Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedImage(null)}>
+          <div className="bg-white rounded-xl p-4 max-w-3xl w-full">
+            <Image
+              src={selectedImage}
+              alt="Venue enlarged"
+              width={1200}
+              height={700}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      )}
 
       {/* Details Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
