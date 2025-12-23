@@ -29,10 +29,10 @@ export function RSVPForm({ isSubmitted, setIsSubmitted }: RSVPFormProps) {
 
     emailjs
       .send(
-        "service_3dqjqcb", // your EmailJS service ID
-        "template_qqa5xq8", // your EmailJS template ID
+        "service_3dqjqcb",
+        "template_qqa5xq8",
         templateParams,
-        "smqDu5p_GMsqbrvce" // your EmailJS public key
+        "smqDu5p_GMsqbrvce"
       )
       .then(
         (response) => {
@@ -143,8 +143,8 @@ export function RSVPForm({ isSubmitted, setIsSubmitted }: RSVPFormProps) {
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all">
               <option value="">Please select</option>
-              <option value="yes">Joyfully accepts</option>
-              <option value="no">Regretfully declines</option>
+              <option value="Joyfully accepts">Joyfully accepts</option>
+              <option value="Regretfully declines">Regretfully declines</option>
             </select>
           </div>
 
