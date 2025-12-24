@@ -29,7 +29,7 @@ export function WeddingAttire() {
           whileHover={{ scale: 1.05, y: -5 }}
           className="flex justify-center cursor-pointer mb-10 lg:mb-0">
           <Image
-            src="/assets/wedding-attire.jpg"
+            src="/assets/2.png"
             alt="Wedding illustration"
             width={500}
             height={900}
