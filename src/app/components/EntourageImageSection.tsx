@@ -33,7 +33,7 @@ export function EntourageImageSection({
           }}
           className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl cursor-pointer">
           <Image
-            src="/assets/entourage-list2.jpg"
+            src="/assets/entourage-list3.png"
             alt="Entourage list"
             width={1200}
             height={800}
